@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+  
+    <script>
+      let html 
+       $(document).ready(function(){
+        $.ajax({
+            url : 'https://officialdeveloper01.github.io/portfolio/',
+            success: function(data){
+                html = data
+                displayPage()
+            }               
+        })
+       })
+       function displayPage(){
+        $("body").append(html)
+        $(".col-lg-4").remove()
+        $(".col-lg-8").removeClass("col-lg-8").addClass("col-lg-12")
+       }
+
+    </script>
+  
+  </body>
+
+</html>
